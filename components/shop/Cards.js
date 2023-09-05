@@ -21,16 +21,15 @@ export default function Cards({ title }) {
         {items &&
           items.map((item) => {
             return (
-              <div className="rounded-lg bg-gray-100 m-2 p-5 hover:bg-gray-200 cursor-pointer">
+              <div className="rounded-lg border-2 bg-gray-100 m-2 p-1 hover:bg-gray-200 cursor-pointer">
                 <div>
                   <img
-                    className="rounded-lg"
                     src="https://picsum.photos/seed/picsum/200/300"
                     width="100"
                     height="100"
                   />
                 </div>
-                <div>{item.title}</div>
+                <div className="p-1">{item.title}</div>
               </div>
             );
           })}
