@@ -1,30 +1,38 @@
-import { BUILDERTOOLS } from './buildertools';
 import { useState, useEffect } from 'react';
+import { Tools } from './tools';
+import { Viewer } from './viewer';
+import { Drawer } from './drawer';
+
 export default function index() {
   const [pagelibrary, setPageLibrary] = useState([]);
+  const [selectlibrary, setSelectLibrary] = useState();
 
   const addintoLibrary = (item) => {
     return setPageLibrary([...pagelibrary, item]);
   };
-  const Tools = () =>
-    BUILDERTOOLS &&
-    BUILDERTOOLS.map((item) => {
-      return (
-        <div className="list-item" onClick={() => addintoLibrary(item)}>
-          {item.title}
-        </div>
-      );
-    });
+  const addSelectLibraryToProperty = (item) => {
+    return setSelectLibrary(item);
+  };
+
   return (
     <div className="flex grid grid-cols-4 ">
       <div className="border-2 h-80 pane">
-        <Tools />
+        <Tools addintoLibrary={addintoLibrary} />
       </div>
       <div className="p-5 pane">
         <div>drawing pane</div>
+        <div>
+          <Drawer
+            pagelibrary={pagelibrary}
+            addSelectLibraryToProperty={addSelectLibraryToProperty}
+          />
+        </div>
       </div>
 
-      <div className="p-5 pane">Properties</div>
+      <div className="p-5 pane">
+        <div>Properties</div>
+        <div>{selectlibrary && selectlibrary.title}</div>
+      </div>
       <div className="p-5 pane">
         <div className="flex">
           <span className="list-item">Desktop</span>
@@ -34,10 +42,7 @@ export default function index() {
         <div>
           <div>Viewer</div>
           <div>
-            {pagelibrary &&
-              pagelibrary.map((item) => {
-                return <div>{item.title}</div>;
-              })}
+            <Viewer pagelibrary={pagelibrary} />
           </div>
         </div>
       </div>
