@@ -29,3 +29,12 @@ a {
 .primary-button {
   @apply bg-blue-500 rounded-lg p-2 mt-2 mb-2 ml-1 mr-1 text-white font-bold;
 }
+.list {
+  @apply bg-pink-100;
+}
+.list-item {
+  @apply bg-gray-100 p-2 hover:bg-gray-200 hover:cursor-pointer;
+}
+.pane {
+  @apply border;
+}
