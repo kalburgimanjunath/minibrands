@@ -1,20 +1,5 @@
-export default function Cards({ title }) {
-  const items = [
-    {
-      id: 1,
-      title: 'item 1',
-      description: 'item 1 description',
-      price: 1000,
-      discount: 20,
-    },
-    {
-      id: 2,
-      title: 'item 2',
-      description: 'item 2 description',
-      price: 2000,
-      discount: 20,
-    },
-  ];
+import Link from 'next/link';
+export default function Cards({ title, items, link }) {
   const CartItems = ({ items }) => {
     return (
       <div className="flex">
@@ -29,7 +14,9 @@ export default function Cards({ title }) {
                     height="100"
                   />
                 </div>
-                <div className="p-1">{item.title}</div>
+                <div className="p-1">
+                  <Link href={`./${link}/:${item.id}`}>{item.title}</Link>
+                </div>
               </div>
             );
           })}

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 export default function Header() {
   const menus = [
-    { title: 'Home', link: 'home' },
-    { title: 'Partner', link: 'partner' },
+    { title: 'Home', link: '/' },
+    { title: 'Partner', link: 'partners' },
     { title: 'Products', link: 'products' },
     { title: 'Services', link: 'services' },
     { title: 'Shop', link: 'shop' },
