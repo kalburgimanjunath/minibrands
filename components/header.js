@@ -9,7 +9,7 @@ export default function Header() {
     { title: 'Contact Us', link: 'contactus' },
   ];
   return (
-    <div className="flex bg-pink-500 justify-center text-white">
+    <div className="flex bg-pink-500 justify-center text-white shadow-lg">
       {menus &&
         menus.map((item) => {
           return (

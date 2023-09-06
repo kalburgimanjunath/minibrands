@@ -4,7 +4,9 @@ export const Drawer = ({ pagelibrary, addSelectLibraryToProperty }) => {
     pagelibrary &&
     pagelibrary.map((item) => {
       return (
-        <div onClick={() => addSelectLibraryToProperty(item)}>{item.title}</div>
+        <div onClick={() => addSelectLibraryToProperty(item)}>
+          <div>{item.title}</div>
+        </div>
       );
     })
   );

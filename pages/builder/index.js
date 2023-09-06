@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Tools } from './tools';
 import { Viewer } from './viewer';
 import { Drawer } from './drawer';
+import { Property } from './property';
 
 export default function index() {
   const [pagelibrary, setPageLibrary] = useState([]);
@@ -16,7 +17,7 @@ export default function index() {
 
   return (
     <div className="flex grid grid-cols-4 ">
-      <div className="border-2 h-80 pane">
+      <div className="h-80 pane ">
         <Tools addintoLibrary={addintoLibrary} />
       </div>
       <div className="p-5 pane">
@@ -31,7 +32,7 @@ export default function index() {
 
       <div className="p-5 pane">
         <div>Properties</div>
-        <div>{selectlibrary && selectlibrary.title}</div>
+        <Property selectlibrary={selectlibrary} />
       </div>
       <div className="p-5 pane">
         <div className="flex">

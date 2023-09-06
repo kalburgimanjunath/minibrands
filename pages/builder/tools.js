@@ -3,7 +3,10 @@ export const Tools = ({ addintoLibrary }) =>
   BUILDERTOOLS &&
   BUILDERTOOLS.map((item) => {
     return (
-      <div className="list-item" onClick={() => addintoLibrary(item)}>
+      <div
+        className="list-item shadow-lg border"
+        onClick={() => addintoLibrary(item)}
+      >
         {item.title}
       </div>
     );
