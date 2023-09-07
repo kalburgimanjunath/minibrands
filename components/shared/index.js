@@ -5,6 +5,7 @@ import { Header1, Header2, MainHeader } from './header';
 import Lists from './lists';
 import Menu from './menu';
 import Slider from './slider';
+import Input from './forms/index';
 export {
   Banner,
   Dropdown,
@@ -15,4 +16,5 @@ export {
   Lists,
   Menu,
   Slider,
+  Input,
 };
