@@ -1,17 +1,17 @@
-export function MainHeader() {
+function MainHeader() {
   return <div>MainHeader</div>;
 }
-export const Header1 = ({ title, menu, banner }) => {
-  const menu = ['Home', 'About Us', 'Products', 'Services', 'Contact Us'];
-  const banner = '';
+const menu = ['Home', 'About Us', 'Products', 'Services', 'Contact Us'];
+const banner = '';
+const Header1 = ({ title }) => {
   return (
     <>
-      <div>
+      <div className="flex p-5 bg-pink-100 items-center shadow-lg">
         <div>Logo</div>
-        <div>
+        <div className="flex justify-end w-full">
           {menu &&
             menu.map((item) => {
-              return <div>{item}</div>;
+              return <div className="p-2">{item}</div>;
             })}
         </div>
       </div>
@@ -19,21 +19,18 @@ export const Header1 = ({ title, menu, banner }) => {
   );
 };
 
-export const Header2 = ({ title, menu, banner }) => {
-  const menu = ['Home', 'About Us', 'Products', 'Services', 'Contact Us'];
-  const banner = '';
+const Header2 = ({ title }) => {
   return (
     <>
-      <div>
+      <div className="flex p-5 bg-pink-100 items-center shadow-lg">
         <div>Logo</div>
         <div>
-          Search:
           <input type="search" />
         </div>
-        <div>
+        <div className="flex justify-end w-full">
           {menu &&
             menu.map((item) => {
-              return <div>{item}</div>;
+              return <div className="p-2">{item}</div>;
             })}
         </div>
       </div>

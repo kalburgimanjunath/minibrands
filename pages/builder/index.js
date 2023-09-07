@@ -41,8 +41,8 @@ export default function index() {
           <span className="list-item">Tablet</span>
         </div>
         <div>
-          <div>Viewer</div>
-          <div>
+          <div className="header-h1">Viewer</div>
+          <div className="border-2 w-48">
             <Viewer pagelibrary={pagelibrary} />
           </div>
         </div>

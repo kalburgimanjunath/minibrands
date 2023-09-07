@@ -1,11 +1,14 @@
-import { Header1, MainFooter } from '../../components/shared';
-const AddedLibrary = (item) => {
+import { Header1, Header2 } from '../../components/shared';
+const AddedLibrary = ({ item }) => {
+  console.log(item);
   if (item.title == 'header') {
     return (
       <div>
-        <Header1 />
+        <Header2 />
       </div>
     );
+  } else {
+    return <div>{item.title}</div>;
   }
 };
 export const Viewer = ({ pagelibrary }) =>
